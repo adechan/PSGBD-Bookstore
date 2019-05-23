@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.client.PurchaseHistoryClientController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #FFF2F2;">
+         <center>
+            <ScrollPane prefHeight="481.0" prefWidth="1099.0" style="-fx-background-color: #ffe6e6;" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="1098.0" style="-fx-background-color: #ffe6e6;">
+                     <children>
+                        <HBox prefHeight="482.0" prefWidth="1106.0">
+                           <children>
+                              <VBox prefHeight="482.0" prefWidth="945.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last purchases on our website:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <TableView prefHeight="463.0" prefWidth="379.0">
+                                      <columns>
+                                        <TableColumn prefWidth="130.39996027946472" text="Title" />
+                                        <TableColumn minWidth="0.800018310546875" prefWidth="144.8000030517578" text="Author" />
+                                          <TableColumn prefWidth="146.4000244140625" text="Bought by" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="482.0" prefWidth="1206.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User history:" />
+                                    <TableView layoutY="22.0" prefHeight="340.0" prefWidth="676.0">
+                                      <columns>
+                                        <TableColumn prefWidth="136.79998475313187" text="Title" />
+                                        <TableColumn prefWidth="100.79998779296875" text="Author" />
+                                          <TableColumn prefWidth="257.59996032714844" text="Description" />
+                                          <TableColumn prefWidth="179.99993896484375" text="Rating" />
+                                      </columns>
+                                    </TableView>
+                                    <Text layoutX="14.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommandation based on user history" />
+                                    <TableView layoutY="389.0" prefHeight="89.0" prefWidth="676.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="Title" />
+                                        <TableColumn prefWidth="75.0" text="Author" />
+                                          <TableColumn prefWidth="139.2000274658203" text="Description" />
+                                          <TableColumn prefWidth="75.0" text="Category" />
+                                          <TableColumn prefWidth="112.7999267578125" text="Puplishing" />
+                                          <TableColumn prefWidth="93.60009765625" text="Rating" />
+                                          <TableColumn prefWidth="103.99993896484375" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

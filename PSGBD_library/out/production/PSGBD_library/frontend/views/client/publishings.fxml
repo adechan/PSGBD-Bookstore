@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.client.PublishingsClientController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #FFF2F2;">
+         <center>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="533.0" prefWidth="1100.0" style="-fx-background-color: #ffe6e6;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="publishersTable" layoutX="-4.0" prefHeight="375.0" prefWidth="1100.0">
+                    <columns>
+                        <TableColumn editable="false" prefWidth="595.9999878406525" text="Name">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="name" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="502.4000244140625" text="Date" />
+
+                    </columns>
+                  </TableView>
+                  <Pagination fx:id="pagination" maxPageIndicatorCount="0" pageCount="1" prefHeight="418.0" prefWidth="1100.0" />
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonClick" style="-fx-background-color: #F4898B;" text="Delete publishing" visible="false" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

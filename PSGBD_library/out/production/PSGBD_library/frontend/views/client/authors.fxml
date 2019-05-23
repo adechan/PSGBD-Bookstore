@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.client.AuthorsClientController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #FFF2F2;">
+         <center>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="533.0" prefWidth="1100.0" style="-fx-background-color: #ffe6e6;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="authorsTable" layoutX="-4.0" prefHeight="375.0" prefWidth="1100.0">
+                    <columns>
+                        <TableColumn editable="false" prefWidth="307.2000548839569" text="Name">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="firstName" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="296.7999267578125" text="Surname">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="lastName" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="496.800048828125" text="Description">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="price" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                    </columns>
+                  </TableView>
+                  <Pagination fx:id="pagination" maxPageIndicatorCount="0" pageCount="1" prefHeight="418.0" prefWidth="1100.0" />
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onMouseClicked="#handleDeleteButtonClick" style="-fx-background-color: #F4898B;" text="Delete Author" visible="false" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

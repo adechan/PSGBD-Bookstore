@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.client.HomeClientController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #FFF2F2;">
+         <top>
+            <VBox prefHeight="78.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #E4484A #E4484A;">
+                    <items>
+                      <Button mnemonicParsing="false" onMouseClicked="#handleMyAccountButtonClick" prefHeight="26.0" prefWidth="159.0" style="-fx-background-color: #F4898B;" text="My Account" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#handleLogoutButtonClick" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #F4898B;" text="Log out" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                    </items>
+                  </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FCB8B9;">
+                    <items>
+                      <Button mnemonicParsing="false" onMouseClicked="#handleBooksButtonClick" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #E4484A #E4484A;" text="Books" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#handleAuthorsButtonClick" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #E4484A #E4484A;" text="Authors" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#handleCategoriesButtonClick" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #E4484A #E4484A;" text="Categories" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#handlePublishingsButtonClick" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #E4484A #E4484A;" text="Publishings" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextField prefHeight="26.0" prefWidth="291.0" promptText="search product" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <ScrollPane prefHeight="481.0" prefWidth="1099.0" style="-fx-background-color: #ffe6e6;" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane fx:id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="1098.0" style="-fx-background-color: #ffe6e6;">
+                     <children>
+                        <ToolBar layoutX="-7.0" layoutY="-6.0" prefHeight="40.0" prefWidth="1107.0" style="-fx-background-color: #F4898B;">
+                          <items>
+                            <Button mnemonicParsing="false" style="-fx-background-color: #E4484A #E4484A;" text="Add book" />
+                              <Button mnemonicParsing="false" style="-fx-background-color: #E4484A #E4484A;" text="Add author" />
+                              <Button mnemonicParsing="false" style="-fx-background-color: #E4484A #E4484A;" text="Add category" />
+                              <Button mnemonicParsing="false" style="-fx-background-color: #E4484A #E4484A;" text="Add publishing" />
+                          </items>
+                        </ToolBar>
+                        <Pane layoutX="190.0" layoutY="56.0" prefHeight="434.0" prefWidth="735.0" style="-fx-background-color: #FCB8B9;">
+                           <children>
+                              <TextField layoutX="192.0" layoutY="64.0" prefHeight="25.0" prefWidth="351.0" promptText="Title" />
+                              <TextField layoutX="192.0" layoutY="98.0" prefHeight="25.0" prefWidth="352.0" promptText="Author" />
+                              <TextField layoutX="192.0" layoutY="138.0" prefHeight="25.0" prefWidth="351.0" promptText="Description" />
+                              <TextField layoutX="192.0" layoutY="177.0" prefHeight="25.0" prefWidth="352.0" promptText="Publishing" />
+                              <Text layoutX="313.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a new book:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Button layoutX="321.0" layoutY="344.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #E4484A #E4484A;" text="Add book" textFill="WHITE" />
+                              <TextField layoutX="192.0" layoutY="217.0" prefHeight="25.0" prefWidth="350.0" promptText="Price" />
+                              <TextField layoutX="192.0" layoutY="253.0" prefHeight="25.0" prefWidth="352.0" promptText="Stock" />
+                              <TextField layoutX="192.0" layoutY="288.0" prefHeight="25.0" prefWidth="352.0" promptText="Rating" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

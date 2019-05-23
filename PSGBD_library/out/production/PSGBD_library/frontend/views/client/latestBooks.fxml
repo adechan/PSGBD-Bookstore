@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.client.LatestBooksClientController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #FFF2F2;">
+         <center>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="533.0" prefWidth="1100.0" style="-fx-background-color: #ffe6e6;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="latestTable" layoutX="-4.0" prefHeight="375.0" prefWidth="1100.0">
+                    <columns>
+                        <TableColumn editable="false" prefWidth="286.4000060558319" text="Name">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="name" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="152.79998779296875" text="Description">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="description" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" minWidth="0.0" prefWidth="130.39999389648438" text="Author">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="author" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="128.800048828125" text="Category">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="category" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" minWidth="0.0" prefWidth="134.4000244140625" text="Publishing">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="publisher" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="73.60003662109375" text="Rating">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="rating" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="64.00006103515625" text="Stock">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="stock" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn editable="false" prefWidth="87.2000732421875" text="Price">
+                            <cellValueFactory>
+                              <PropertyValueFactory property="price" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                    </columns>
+                  </TableView>
+                  <Pagination fx:id="pagination" maxPageIndicatorCount="0" pageCount="1" prefHeight="418.0" prefWidth="1100.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
